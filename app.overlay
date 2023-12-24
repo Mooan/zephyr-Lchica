@@ -1,0 +1,10 @@
+/{
+    extend_gpios: extend_gpios {
+        compatible = "gpio-leds";
+        board_gpio: board_gpio {
+            // Assign GPIO to Pin 2 (EMC_04) and Pin 5 (EMC_08) as defined in the following documentation.
+            // https://docs.zephyrproject.org/latest/boards/arm/teensy4/doc/index.html#connections-and-ios
+            gpios = <&gpio4 4 GPIO_ACTIVE_HIGH>, <&gpio9 8 GPIO_ACTIVE_HIGH>;
+        };
+    }; 
+};
